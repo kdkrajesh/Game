@@ -16,6 +16,15 @@ public class Main {
 	Scanner input=new Scanner(System.in);
 	System.out.println("Enter player name: ");
 	String pName= input.nextLine();
+		
+	System.out.println("Enter player age: ");
+	int age= input.nextInt();
+		
+	if (age < 18){
+		
+		System.out.println("Age should be 18+. You can not play the game");	
+	}
+		else{
 	
 	Player player= new Player(pName, 100);
         Game game = new Game(d1, d2, d3);
@@ -89,6 +98,7 @@ public class Main {
         } //while true
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+	}
 	}
 
 }
