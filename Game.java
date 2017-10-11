@@ -43,6 +43,7 @@ public class Game {
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+			player.receiveWinnings(winnings,player,bet);
 		}
         return winnings;		
 	}
