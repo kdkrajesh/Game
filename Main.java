@@ -101,7 +101,7 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 	
-	    System.out.println("If you want to exit: ");
+	    System.out.println("If you want to exit(q): ");
 
             String ans = console.readLine();
 		
