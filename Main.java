@@ -56,6 +56,13 @@ public class Main {
                 int turn = 0;
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
+			Dice d1=new Dice();
+			Dice d2=new Dice();
+			Dice d3=new Dice();
+			
+			Game game= new Game(d1,d2,d3);
+			List<DiceValue> cdv=game.getDiceValue();
+			
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
