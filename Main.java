@@ -100,10 +100,16 @@ public class Main {
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
+	
+	    System.out.println("If you want to exit: ");
 
             String ans = console.readLine();
 		
-            if (ans.equals("q"));
+            if (ans.equals("q")){
+		break;    
+	    }else{
+		continue;    
+	    }
         } //while true
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
