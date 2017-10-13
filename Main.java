@@ -11,9 +11,11 @@ public class Main {
         Dice d2 = new Dice();
         Dice d3 = new Dice();
 
-        Player player = new Player("Fred", 100);
-        Game game = new Game(d1, d2, d3);
-        List<DiceValue> cdv = game.getDiceValues();
+        Player player ;
+        Game game ;
+        List<DiceValue> cdv ;
+        Scanner getScaner;
+
 
         int totalWins = 0;
         int totalLosses = 0;
@@ -45,8 +47,13 @@ public class Main {
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
                 	
-                	int winnings = game.playRound(player, pick, bet);
+               	
+		    d1 = new Dice();
+                    d2 = new Dice();
+                    d3 = new Dice();
+                    game = new Game(d1, d2, d3);
                     cdv = game.getDiceValues();
+                    int winnings = game.playRound(player, pick, bet);
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
