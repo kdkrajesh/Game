@@ -34,6 +34,15 @@ public class Main {
                 System.out.println("Enter Member Name :");
                 String playerName=getScaner.next();
 		    
+		System.out.println("Enter Age of Member :");
+                int Age=getScaner.nextInt();
+                
+                 if (Age<18) 
+                 {
+                     System.out.println("This member not allow to play game becouse of age restrictions :");
+                     break;
+                 }
+		    
             	String name =playerName;
             	int balance = 100;
             	int limit = 0;
