@@ -39,7 +39,7 @@ public class Game {
 			}
 		}
 		
-		int winnings = matches * bet;
+		int winnings = 0; 
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
